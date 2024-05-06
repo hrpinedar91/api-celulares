@@ -20,4 +20,6 @@ class Celular extends Model
         'release_date',
         'specifications'
     ];
+
+    protected $table = 'celulares';
 }
