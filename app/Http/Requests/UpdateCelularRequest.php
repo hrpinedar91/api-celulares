@@ -32,6 +32,7 @@ class UpdateCelularRequest extends FormRequest
             'is_waterproof' => 'sometimes|boolean',
             'release_date' => 'sometimes|date',
             'specifications' => 'sometimes|nullable',
+            'category_id' => 'sometimes|exists:categories,id',
         ];
     }
 }

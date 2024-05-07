@@ -22,4 +22,9 @@ class Celular extends Model
     ];
 
     protected $table = 'celulares';
+
+    public function category()
+    {
+        return $this->belongsTo(Category::class);
+    }
 }

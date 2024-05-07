@@ -2,6 +2,7 @@
 
 namespace App\Http\Requests;
 
+use App\Models\Category;
 use Illuminate\Foundation\Http\FormRequest;
 
 class StoreCelularRequest extends FormRequest
@@ -31,6 +32,7 @@ class StoreCelularRequest extends FormRequest
             'is_waterproof' => 'required|boolean',
             'release_date' => 'required|date',
             'specifications' => 'nullable',
+            'category_id' => 'required|exists:categories,id',
         ];
     }
 }

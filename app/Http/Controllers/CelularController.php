@@ -34,7 +34,7 @@ class CelularController extends Controller
     public function show(Celular $celular)
     {
         //
-        return response()->json($celular);
+        return $celular->load('category');
     }
 
     /**

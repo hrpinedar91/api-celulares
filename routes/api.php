@@ -2,6 +2,7 @@
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\CategoryController;
 
 /*
 |--------------------------------------------------------------------------
@@ -25,3 +26,5 @@ Route::apiResource('celular', \App\Http\Controllers\CelularController::class)
 Route::post('/login', [\App\Http\Controllers\LoginController::class, 'login']);
 
 
+Route::apiResource('categories', \App\Http\Controllers\CategoryController::class)
+                    ->middleware('auth:sanctum');
